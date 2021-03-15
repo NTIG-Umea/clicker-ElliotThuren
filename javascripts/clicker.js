@@ -91,17 +91,17 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
   {
-    name: 'Arg gubbe',
+    name: 'Gatherer',
     cost: 10,
     amount: 1
   },
   {
-    name: 'Internettroll',
+    name: 'Searchteam',
     cost: 100,
     amount: 10
   },
   {
-    name: 'Twitterbot',
+    name: 'Sniffdog',
     cost: 1000,
     amount: 100
   }
@@ -132,8 +132,8 @@ function createCard(upgrade) {
   header.classList.add('title');
   const cost = document.createElement('p');
 
-  header.textContent = upgrade.name + ', +' + upgrade.amount + ' likes per sekund.';
-  cost.textContent = 'Köp för ' + upgrade.cost + ' likes';
+  header.textContent = upgrade.name + ', +' + upgrade.amount + ' food per second.';
+  cost.textContent = 'Buy for ' + upgrade.cost + ' food';
 
   card.addEventListener('click', (e) => {
     if (money >= upgrade.cost) {
@@ -141,11 +141,11 @@ function createCard(upgrade) {
       moneyPerClick++;
       money -= upgrade.cost;
       upgrade.cost *= 1.5;
-      cost.textContent = 'Köp för ' + upgrade.cost + ' likes';
+      cost.textContent = 'Buy for ' + upgrade.cost + ' food';
       moneyPerSecond += upgrade.amount;
-      message('Grattis du har en ny följare!', 'success');
+      message('Congratulations, you now have more searchers!', 'success');
     } else {
-      message('Du har inte råd.', 'warning');
+      message('You cannot afford this.', 'warning');
     }
   });
 
