@@ -53,8 +53,8 @@ clickerButton.addEventListener('click', () => {
  */
 function step(timestamp) {
   moneyTracker.textContent = Math.round(money);
-  mpsTracker.textContent = moneyPerSecond;
-  followerTracker.textContent = moneyPerClick;
+  mpsTracker.textContent = Math.round (moneyPerSecond);
+  followerTracker.textContent = Math.round (moneyPerClick);
 
   if (timestamp >= last + 1000) {
     money += moneyPerSecond;
@@ -102,8 +102,13 @@ upgrades = [
   },
   {
     name: 'Sniffdog',
-    cost: 1000,
-    amount: 100
+    cost: 500,
+    amount: 30
+  },
+  {
+    name: 'Airdrop',
+    cost: 5000,
+    amount: 70
   }
 ]
 
@@ -138,10 +143,10 @@ function createCard(upgrade) {
   card.addEventListener('click', (e) => {
     if (money >= upgrade.cost) {
       followers++;
-      moneyPerClick++;
+      moneyPerClick*=1.1;
       money -= upgrade.cost;
-      upgrade.cost *= 1.5;
-      cost.textContent = 'Buy for ' + upgrade.cost + ' food';
+      upgrade.cost *= 1.3;
+      cost.textContent = 'Buy for ' + Math.round (upgrade.cost) + ' food';
       moneyPerSecond += upgrade.amount;
       message('Congratulations, you now have more searchers!', 'success');
     } else {

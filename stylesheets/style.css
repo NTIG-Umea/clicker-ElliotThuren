@@ -1,6 +1,36 @@
 /* elements */
 img {
-  max-width: 100%;
+  max-width: 45%;
+  
+}
+
+.glass {
+  flex: 1;
+}
+
+.text {
+ padding-left: 38rem;
+}
+
+.text2 {
+  font-weight: 200;
+  width: 70%;
+  font-size: 0.6rem;
+  float: ;
+}
+
+.button2 {
+  padding-left: 26rem;
+}
+
+.column {
+  padding-right: 0rem;
+}
+
+body {
+  background-color:rgb(215, 247, 255);
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -13,10 +43,11 @@ footer {
   width: 8rem;
   height: 8rem;
   font-size: 2rem;
+  background-color: rgb(118, 118, 255);
 }
 
 #msgbox {
-  width: 100%;
+  width: 29%;
 
 }
 
@@ -40,10 +71,11 @@ footer {
   border: 1px solid black;
   margin: .5rem 0;
   padding: .5rem;
+  width: 40%;
 }
 
 .card:hover {
-  background-color:rgb(215, 247, 255);
+  background-color:rgb(111, 226, 255);
 }
 
 .title {
@@ -56,7 +88,8 @@ footer {
 }
 
 .w-100 {
-  width: 100%;
+  font-weight: 200;
+  width: 70%;
 }
 
 .d-flex {
@@ -79,13 +112,6 @@ footer {
   align-items: center;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
 .column {
   display: flex;
   flex-direction: column;
@@ -96,11 +122,9 @@ footer {
 
 .container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-top: 8rem;
+  margin-top: 1rem;
 }
 
 @media (min-width: 576px) {
