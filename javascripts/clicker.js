@@ -37,6 +37,10 @@ let last = 0;
  * Läs mer: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
  */
 clickerButton.addEventListener('click', () => {
+  clickerButton.style.backgroundColor = "rgb(140, 140, 255)";
+  setTimeout(() => {
+    clickerButton.style.backgroundColor = "rgb(118, 118, 255)";
+  }, 50);
   // vid click öka score med 1
   money += moneyPerClick;
   // console.log(clicker.score);
@@ -93,22 +97,32 @@ upgrades = [
   {
     name: 'Gatherer',
     cost: 10,
-    amount: 1
+    amount: 5
   },
   {
     name: 'Searchteam',
     cost: 100,
-    amount: 10
+    amount: 35
   },
   {
     name: 'Sniffdog',
     cost: 500,
-    amount: 30
+    amount: 85
+  },
+  {
+    name: 'Safelock',
+    cost: 8000,
+    amount: 415
   },
   {
     name: 'Airdrop',
-    cost: 5000,
-    amount: 70
+    cost: 75000,
+    amount: 2255
+  },
+  {
+    name: 'Huge Bunker',
+    cost: 100000000,
+    amount: 100000
   }
 ]
 
