@@ -121,8 +121,8 @@ upgrades = [
   },
   {
     name: 'Huge Bunker',
-    cost: 100000000,
-    amount: 100000
+    cost: 1000000000000000000,
+    amount: 10000000000
   }
 ]
 
